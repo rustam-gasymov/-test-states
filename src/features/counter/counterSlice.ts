@@ -7,6 +7,9 @@ export const configureToolsSlice = createSlice({
     counter: 0,
   },
   reducers: {
+    setIncrementValue: (state) => {
+      state.value++;
+    },
     setNumber: (state, { payload }) => {
       console.log("settnumberits new reducer from slice", payload);
       state.counter += payload;
