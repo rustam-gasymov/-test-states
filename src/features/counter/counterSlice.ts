@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export const reducers = {
   setIncrementValue: (state: typeof initialState) => {
-    state.value++;
+    state.value = state.value + 20;
   },
   setNumber: (state: typeof initialState, { payload }: PayloadAction<number>) => {
     console.log("settnumberits new reducer from slice", payload);
@@ -21,12 +21,12 @@ const initialState = {
   counter: 0,
 };
 
-export const configureToolsSlice = createSlice({
-  name: "configureTools",
-  initialState,
-  reducers,
-});
+// export const configureToolsSlice = createSlice({
+//   name: "configureTools",
+//   initialState,
+//   reducers,
+// });
 
-export const { setDecrementValue, setNumber, setIncrementValue } = configureToolsSlice.actions;
+// export const { setDecrementValue, setNumber, setIncrementValue } = configureToolsSlice.actions;
 
-export default configureToolsSlice.reducer;
+// export default configureToolsSlice.reducer;
