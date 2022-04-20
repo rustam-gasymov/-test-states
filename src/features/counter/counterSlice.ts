@@ -21,12 +21,12 @@ const initialState = {
   counter: 0,
 };
 
-// export const configureToolsSlice = createSlice({
-//   name: "configureTools",
-//   initialState,
-//   reducers,
-// });
+export const configureToolsSlice = createSlice({
+  name: "configureTools",
+  initialState,
+  reducers,
+});
 
-// export const { setDecrementValue, setNumber, setIncrementValue } = configureToolsSlice.actions;
+export const { setDecrementValue, setNumber, setIncrementValue } = configureToolsSlice.actions;
 
-// export default configureToolsSlice.reducer;
+export default configureToolsSlice.reducer;
