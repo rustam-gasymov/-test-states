@@ -13,7 +13,7 @@ const initialState = {
   counter: 0,
 };
 
-export const reducers = {
+const reducers = {
   setIncrementValue: (state: typeof initialState) => {
     state.value++;
   },
