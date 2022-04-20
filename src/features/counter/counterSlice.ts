@@ -1,5 +1,20 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+export const reducers = {
+  setIncrementValue: (state: typeof initialState) => {
+    state.value++;
+  },
+  setNumber: (state: typeof initialState, { payload }: PayloadAction<number>) => {
+    console.log("settnumberits new reducer from slice", payload);
+    state.counter = state.counter + payload;
+  },
+  setDecrementValue: (state: typeof initialState, { payload }: PayloadAction<number>) => {
+    console.log("decrement from decrement", payload);
+
+    state.value = state.value - 20;
+  },
+};
+
 const initialState = {
   isModalVisible: false,
   value: 0,
@@ -9,20 +24,7 @@ const initialState = {
 export const configureToolsSlice = createSlice({
   name: "configureTools",
   initialState,
-  reducers: {
-    setIncrementValue: (state) => {
-      state.value++;
-    },
-    setNumber: (state, { payload }) => {
-      console.log("settnumberits new reducer from slice", payload);
-      state.counter = state.counter + payload;
-    },
-    setDecrementValue: (state, { payload }) => {
-      console.log("decrement from decrement", payload);
-
-      state.value = state.value - 20;
-    },
-  },
+  reducers,
 });
 
 export const { setDecrementValue, setNumber, setIncrementValue } = configureToolsSlice.actions;
