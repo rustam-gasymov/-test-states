@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 import{createSlice as e}from"@reduxjs/toolkit";var i,o=e({name:"configureTools",initialState:{isModalVisible:!1,value:0},reducers:{setDecrementValue:function(e,i){var o=i.payload;console.log("decrement from decrement",o),e.value=e.value-10},changeVisibilityOfConfigureForm:function(e,i){var o=i.payload;e.isModalVisible=o}},extraReducers:{}}),r=(i=o.actions).setDecrementValue,a=i.changeVisibilityOfConfigureForm;o.reducer;export{a as changeVisibilityOfConfigureForm,o as configureToolsSlice,r as setDecrementValue};
+=======
+import{createSlice as e}from"@reduxjs/toolkit";var t,r={setIncrementValue:function(e){e.value=e.value+20},setNumber:function(e,t){var r=t.payload;console.log("settnumberits new reducer from slice",r),e.counter=e.counter+r},setDecrementValue:function(e,t){var r=t.payload;console.log("decrement from decrement",r),e.value=e.value-20}},o=e({name:"configureTools",initialState:{isModalVisible:!1,value:0,counter:0},reducers:r}),n=(t=o.actions).setDecrementValue,u=t.setNumber,a=t.setIncrementValue;o.reducer;export{o as configureToolsSlice,r as reducers,n as setDecrementValue,a as setIncrementValue,u as setNumber};
+>>>>>>> 5b5db50ebb58d0cbf4bdf53dd758e7932bd5d1d4
 //# sourceMappingURL=index.js.map
