@@ -5,16 +5,8 @@ export const configureToolsSlice = createSlice({
   initialState: {
     isModalVisible: false,
     value: 0,
-    counter: 0,
   },
   reducers: {
-    setIncrementValue: (state) => {
-      state.value++;
-    },
-    setNumber: (state, { payload }) => {
-      console.log("settnumberits new reducer from slice", payload);
-      state.counter += payload;
-    },
     setDecrementValue: (state, { payload }) => {
       console.log("decrement from decrement", payload);
 
@@ -27,7 +19,6 @@ export const configureToolsSlice = createSlice({
   extraReducers: {},
 });
 
-export const { setDecrementValue, setNumber, changeVisibilityOfConfigureForm, setIncrementValue } =
-  configureToolsSlice.actions;
+export const { setDecrementValue, changeVisibilityOfConfigureForm } = configureToolsSlice.actions;
 
 export default configureToolsSlice.reducer;
