@@ -24,7 +24,7 @@ export const reducers = {
   setDecrementValue: (state: typeof initialState, { payload }: PayloadAction) => {
     console.log("decrement from decrement", payload);
 
-    state.value = state.value - 10;
+    state.value = state.value - 20;
   },
   changeVisibilityOfConfigureForm: (
     state: typeof initialState,
